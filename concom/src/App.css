@@ -1,0 +1,15 @@
+body{
+  background: linear-gradient(50deg,#3498db, #2ecc71);
+}
+
+main {
+  text-shadow: #2ecc71 0.1em 0.1em;
+  font-family: "Arial";
+}
+div {
+  margin: auto;
+}
+
+label,input {
+  margin-left: 10px;
+}
