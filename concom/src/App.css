@@ -2,6 +2,10 @@ body{
   background: linear-gradient(50deg,#3498db, #2ecc71);
 }
 
+h1 {
+  text-align: center;
+  font-variant: small-caps;
+}
 main {
   text-shadow: #2ecc71 0.1em 0.1em;
   font-family: "Arial";
@@ -12,4 +16,5 @@ div {
 
 label,input {
   margin-left: 10px;
+  display: grid;
 }
