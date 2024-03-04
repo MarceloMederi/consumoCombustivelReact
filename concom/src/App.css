@@ -14,7 +14,12 @@ div {
   margin: auto;
 }
 
-label,input {
-  margin-left: 10px;
-  display: grid;
+div > div {
+  margin-bottom: 15px;
+}
+
+input {
+  border-radius: 10px;
+  border-color: aqua;
+  border: inset;
 }
