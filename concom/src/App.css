@@ -22,4 +22,5 @@ input {
   border-radius: 10px;
   border-color: aqua;
   border: inset;
+  margin-left: 10px;
 }

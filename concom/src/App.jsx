@@ -3,14 +3,15 @@ import './App.css';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [kilometerError, setKilometerErro] = useState("");
+  const [kilometerError, setKilometerError] = useState("");
   const [averageError, setAverageError] = useState("");
+  const [priceError, setPriceError] = useState("");
 
   const validateUser = () => {
     let username = document.getElementById("username").value;
     let userid = document.getElementById("userid").value;
 
-    if (username === "Admin" && userid === "1234") {
+    if (username === "Admin" && userid === "Admin") {
       setIsAuthenticated(true);
       alert("Credenciais corretas!");
     } else {
@@ -20,19 +21,37 @@ function App() {
 
   const handleKilometerChange = (event) => {
     const value = event.target.value;
-    if (parseInt(value, 10) > 1000) {
-      setKilometerErro("O valor máximo é 1000.");
+    const numericRegex = /^\d+$/;
+    if (!numericRegex.test(value)) {
+      setKilometerError("Entrada inválida. Por favor, insira um número.");
+    } else if (parseInt(value, 10) > 1000) {
+      setKilometerError("O valor máximo é 1000.");
     } else {
-      setKilometerErro("");
+      setKilometerError("");
     }
   };
 
-  const handlerAverageChange = (event) => {
+  const handleAverageChange = (event) => {
     const value = event.target.value;
-    if (parseInt(value, 10) > 50) {
+    const numericRegex = /^\d+$/;
+    if (!numericRegex.test(value)) {
+      setAverageError("Entrada inválida. Por favor, insira um número.");
+    } else if (parseInt(value, 10) > 50) {
       setAverageError("O valor máximo é 50.");
     } else {
       setAverageError("");
+    }
+  };
+
+  const handlePriceChange = (event) => {
+    const value = event.target.value;
+    const numericRegex = /^\d*\.?\d+$/;
+    if (!numericRegex.test(value)) {
+      setPriceError("Entrada inválida. Por favor, insira um número.");
+    } else if (parseFloat(value, 0.01) > 10.) {
+      setPriceError("O valor máximo é 10");
+    } else {
+      setPriceError("");
     }
   };
 
@@ -47,13 +66,14 @@ function App() {
 
         <div>
           <label htmlFor="average">Informe a média de consumo do seu veículo (em km/l)</label>
-          <input type="number" id="average" min={0} max={50} required onChange={handlerAverageChange} />
+          <input type="number" id="average" min={0} max={50} required onChange={handleAverageChange} />
           <span style={{ color: "red" }}>{averageError && averageError}</span>
         </div>
 
         <div>
           <label htmlFor="price">Informe o preço do combustível (por litro)</label>
-          <input type="number" id="price" min={0} step={0.01} required />
+          <input type="number" id="price" min={0} step={0.01} max={10.00} required onChange={handlePriceChange} />
+          <span style={{color: "red" }}>{priceError && priceError}</span>
         </div>
       </div>
     );
