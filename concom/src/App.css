@@ -55,3 +55,14 @@ p {
   color: black;
   text-align: center;
 }
+
+.error {
+  color: #ff0000; /* Cor vermelha para mensagens de erro */
+  margin-top: 5px;
+}
+
+/* Adicionando uma classe para as mensagens de feedback */
+.feedback-message {
+  color: #ff0000;
+  margin-top: 10px;
+}

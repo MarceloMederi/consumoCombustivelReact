@@ -18,46 +18,21 @@ function App() {
       setIsAuthenticated(true);
       alert("Credenciais corretas!");
     } else {
-      alert("Usuário incorreto. Tente novamente!");
+      setKilometerError("Usuário ou senha incorretos. Tente novamente.");
     }
   };
 
-  const handleKilometerChange = (event) => {
+  const handleInputChange = (event, setState, setErrorState, maxValue) => {
     const value = event.target.value;
-    setKilometer(value);
-    const numericRegex = /^\d+$/;
-    if (!numericRegex.test(value)) {
-      setKilometerError("Entrada inválida. Por favor, insira um número.");
-    } else if (parseInt(value, 10) > 1000) {
-      setKilometerError("O valor máximo é 1000.");
-    } else {
-      setKilometerError("");
-    }
-  };
+    setState(value);
 
-  const handleAverageChange = (event) => {
-    const value = event.target.value;
-    setAverage(value);
     const numericRegex = /^\d*\.?\d+$/;
     if (!numericRegex.test(value)) {
-      setAverageError("Entrada inválida. Por favor, insira um número.");
-    } else if (parseInt(value, 10) > 50) {
-      setAverageError("O valor máximo é 50.");
+      setErrorState("Entrada inválida. Por favor, insira um número.");
+    } else if (parseFloat(value) > maxValue) {
+      setErrorState(`O valor máximo é ${maxValue}.`);
     } else {
-      setAverageError("");
-    }
-  };
-
-  const handlePriceChange = (event) => {
-    const value = event.target.value;
-    setPrice(value);
-    const numericRegex = /^\d*\.?\d+$/;
-    if (!numericRegex.test(value)) {
-      setPriceError("Entrada inválida. Por favor, insira um número.");
-    } else if (parseFloat(value) > 10) {
-      setPriceError("O valor máximo é 10");
-    } else {
-      setPriceError("");
+      setErrorState("");
     }
   };
 
@@ -70,7 +45,7 @@ function App() {
       const result = (validKilometer / validAverage) * validPrice;
       setCalculationResult(result.toFixed(2));
     } else {
-      alert("Por favor, preencha todos os campos corretamente antes de calcular.");
+      setKilometerError("Por favor, preencha todos os campos corretamente antes de calcular.");
     }
   };
 
@@ -80,19 +55,19 @@ function App() {
         <form>
           <div>
             <label htmlFor="kilometer">Informe a distância que seu veículo vai percorrer (em km)</label>
-            <input type="number" id="kilometer" min={0} max={1000} required onChange={handleKilometerChange} />
+            <input type="text" id="kilometer" required onChange={(e) => handleInputChange(e, setKilometer, setKilometerError, 1000)} />
             <span className="error">{kilometerError && kilometerError}</span>
           </div>
 
           <div>
             <label htmlFor="average">Informe a média de consumo do seu veículo (em km/l)</label>
-            <input type="number" id="average" min={0} step={0.1} max={50} required onChange={handleAverageChange} />
+            <input type="text" id="average" required onChange={(e) => handleInputChange(e, setAverage, setAverageError, 50)} />
             <span className="error">{averageError && averageError}</span>
           </div>
 
           <div>
             <label htmlFor="price">Informe o preço do combustível (por litro)</label>
-            <input type="number" id="price" min={0} step={0.01} max={10.00} required onChange={handlePriceChange} />
+            <input type="text" id="price" required onChange={(e) => handleInputChange(e, setPrice, setPriceError, 10.00)} />
             <span className="error">{priceError && priceError}</span>
           </div>
 
@@ -130,6 +105,7 @@ function App() {
           </div>
 
           <input type="button" value="Entrar" onClick={validateUser} />
+          <span className="error">{kilometerError && kilometerError}</span>
         </div>
       )}
     </main>
