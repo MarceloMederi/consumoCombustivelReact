@@ -55,19 +55,19 @@ function App() {
         <form>
           <div>
             <label htmlFor="kilometer">Informe a distância que seu veículo vai percorrer (em km)</label>
-            <input type="text" id="kilometer" required onChange={(e) => handleInputChange(e, setKilometer, setKilometerError, 1000)} />
+            <input type="text" id="kilometer" placeholder= "200" required onChange={(e) => handleInputChange(e, setKilometer, setKilometerError, 1000)} />
             <span className="error">{kilometerError && kilometerError}</span>
           </div>
 
           <div>
             <label htmlFor="average">Informe a média de consumo do seu veículo (em km/l)</label>
-            <input type="text" id="average" required onChange={(e) => handleInputChange(e, setAverage, setAverageError, 50)} />
+            <input type="text" id="average" placeholder= "10.1" required onChange={(e) => handleInputChange(e, setAverage, setAverageError, 50)} />
             <span className="error">{averageError && averageError}</span>
           </div>
 
           <div>
             <label htmlFor="price">Informe o preço do combustível (por litro)</label>
-            <input type="text" id="price" required onChange={(e) => handleInputChange(e, setPrice, setPriceError, 10.00)} />
+            <input type="text" id="price" placeholder= "3.65" required onChange={(e) => handleInputChange(e, setPrice, setPriceError, 10.00)} />
             <span className="error">{priceError && priceError}</span>
           </div>
 
