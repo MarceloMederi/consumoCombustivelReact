@@ -24,3 +24,15 @@ input {
   border: inset;
   margin-left: 10px;
 }
+
+button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.5em;
+  color: white;
+  transition: ease-in-out .5s;
+}
