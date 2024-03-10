@@ -77,23 +77,23 @@ function App() {
   const renderCalculator = () => {
     return (
       <div>
-        <form action="">
+        <form>
           <div>
             <label htmlFor="kilometer">Informe a distância que seu veículo vai percorrer (em km)</label>
             <input type="number" id="kilometer" min={0} max={1000} required onChange={handleKilometerChange} />
-            <span style={{ color: "red" }}>{kilometerError && kilometerError}</span>
+            <span className="error">{kilometerError && kilometerError}</span>
           </div>
 
           <div>
             <label htmlFor="average">Informe a média de consumo do seu veículo (em km/l)</label>
             <input type="number" id="average" min={0} step={0.1} max={50} required onChange={handleAverageChange} />
-            <span style={{ color: "red" }}>{averageError && averageError}</span>
+            <span className="error">{averageError && averageError}</span>
           </div>
 
           <div>
             <label htmlFor="price">Informe o preço do combustível (por litro)</label>
             <input type="number" id="price" min={0} step={0.01} max={10.00} required onChange={handlePriceChange} />
-            <span style={{ color: "red" }}>{priceError && priceError}</span>
+            <span className="error">{priceError && priceError}</span>
           </div>
 
           <div>
@@ -102,12 +102,11 @@ function App() {
         </form>
 
         {calculationResult !== null && (
-  <div>
-    <h2>Resultado do Cálculo:</h2>
-    <p>{`R$ ${parseFloat(calculationResult).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}</p>
-  </div>
-)}
-
+          <div>
+            <h2>Resultado do Cálculo:</h2>
+            <p>{`R$ ${parseFloat(calculationResult).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}</p>
+          </div>
+        )}
       </div>
     );
   };
