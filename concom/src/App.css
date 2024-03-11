@@ -63,6 +63,7 @@ p {
 
 /* Adicionando uma classe para as mensagens de feedback */
 .feedback-message {
-  color: #ff0000;
+  color: #a01010;
   margin-top: 10px;
+  
 }
