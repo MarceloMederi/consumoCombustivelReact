@@ -41,10 +41,28 @@ function App() {
     const validAverage = parseFloat(average);
     const validPrice = parseFloat(price);
 
-    if (!isNaN(validKilometer) && !isNaN(validAverage) && !isNaN(validPrice)) {
+    const minKilometer = 0;
+    const maxKilometer = 10000;
+    const minAverage = 0;
+    const maxAverage = 100;
+    const minPrice = 0;
+    const maxPrice = 20.00;
+
+    if (
+      !isNaN(validKilometer) &&
+      !isNaN(validAverage) &&
+      !isNaN(validPrice) &&
+      validKilometer >= minKilometer &&
+      validKilometer <= maxKilometer &&
+      validAverage >= minAverage &&
+      validAverage <= maxAverage &&
+      validPrice >= minPrice &&
+      validPrice <= maxPrice
+    ) {
       const result = (validKilometer / validAverage) * validPrice;
       setCalculationResult(result.toFixed(2));
     } else {
+      setCalculationResult(null);
       setKilometerError("Por favor, preencha todos os campos corretamente antes de calcular.");
     }
   };
@@ -55,19 +73,19 @@ function App() {
         <form>
           <div>
             <label htmlFor="kilometer">Informe a distância que seu veículo vai percorrer (em km)</label>
-            <input type="text" id="kilometer" placeholder= "200" required onChange={(e) => handleInputChange(e, setKilometer, setKilometerError, 1000)} />
+            <input type="text" id="kilometer" placeholder="200" required onChange={(e) => handleInputChange(e, setKilometer, setKilometerError, 10000)} />
             <span className="error">{kilometerError && kilometerError}</span>
           </div>
 
           <div>
             <label htmlFor="average">Informe a média de consumo do seu veículo (em km/l)</label>
-            <input type="text" id="average" placeholder= "10.1" required onChange={(e) => handleInputChange(e, setAverage, setAverageError, 50)} />
+            <input type="text" id="average" placeholder="10.1" required onChange={(e) => handleInputChange(e, setAverage, setAverageError, 100)} />
             <span className="error">{averageError && averageError}</span>
           </div>
 
           <div>
             <label htmlFor="price">Informe o preço do combustível (por litro)</label>
-            <input type="text" id="price" placeholder= "3.65" required onChange={(e) => handleInputChange(e, setPrice, setPriceError, 10.00)} />
+            <input type="text" id="price" placeholder="3.65" required onChange={(e) => handleInputChange(e, setPrice, setPriceError, 20.00)} />
             <span className="error">{priceError && priceError}</span>
           </div>
 
@@ -78,7 +96,7 @@ function App() {
 
         {calculationResult !== null && (
           <div>
-            <h2>Resultado do Cálculo:</h2>
+            <h2>O custo para percorrer {kilometer} quilômetros é:</h2>
             <p>{`R$ ${parseFloat(calculationResult).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}</p>
           </div>
         )}
@@ -88,7 +106,7 @@ function App() {
 
   return (
     <main>
-      <h1>Controle de média</h1>
+      <h1>Controle de gasto de combustível</h1>
 
       {isAuthenticated ? (
         renderCalculator()

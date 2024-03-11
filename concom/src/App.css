@@ -12,7 +12,7 @@ h1 {
 }
 
 main {
-  text-shadow: #2ecc71 0.1em 0.1em;
+  text-shadow: #2ecc71 1px 1px;
 }
 
 div {
@@ -51,7 +51,7 @@ button:hover {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 2em;
   color: black;
   text-align: center;
 }
