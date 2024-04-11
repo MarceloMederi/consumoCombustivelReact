@@ -2,25 +2,14 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showCalculator, setShowCalculator] = useState(false);
   const [kilometerError, setKilometerError] = useState("");
   const [averageError, setAverageError] = useState("");
   const [priceError, setPriceError] = useState("");
-  const [username, setUsername] = useState("");
-  const [userid, setUserid] = useState("");
   const [kilometer, setKilometer] = useState("");
   const [average, setAverage] = useState("");
   const [price, setPrice] = useState("");
   const [calculationResult, setCalculationResult] = useState(null);
-
-  const validateUser = () => {
-    if (username === "Admin" && userid === "Admin") {
-      setIsAuthenticated(true);
-      alert("Credenciais corretas!");
-    } else {
-      setKilometerError("Usuário ou senha incorretos. Tente novamente.");
-    }
-  };
 
   const handleInputChange = (event, setState, setErrorState, maxValue) => {
     const value = event.target.value;
@@ -108,23 +97,10 @@ function App() {
     <main>
       <h1>Controle de gasto de combustível</h1>
 
-      {isAuthenticated ? (
-        renderCalculator()
+      {!showCalculator ? (
+        <button onClick={() => setShowCalculator(true)}>Informe os valores</button>
       ) : (
-        <div>
-          <div>
-            <label htmlFor="username">Nome de usuário:</label>
-            <input type="text" id="username" name="username" required onChange={(e) => setUsername(e.target.value)} />
-          </div>
-
-          <div>
-            <label htmlFor="userid">Senha de acesso</label>
-            <input type="password" id="userid" name="userid" required onChange={(e) => setUserid(e.target.value)} />
-          </div>
-
-          <input type="button" value="Entrar" onClick={validateUser} />
-          <span className="error">{kilometerError && kilometerError}</span>
-        </div>
+        renderCalculator()
       )}
     </main>
   );
