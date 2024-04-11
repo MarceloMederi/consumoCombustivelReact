@@ -15,7 +15,7 @@ main {
   text-shadow: #2ecc71 1px 1px;
 }
 
-div {
+.form-container {
   max-width: 600px;
   margin: auto;
   padding: 20px;
@@ -24,11 +24,11 @@ div {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-div > div {
+.form-container > div {
   margin-bottom: 15px;
 }
 
-input {
+.input-field {
   width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #2ecc71;
@@ -37,33 +37,38 @@ input {
   box-sizing: border-box;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
+.error {
+  color: #ff0000;
+  margin-top: 5px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button {
+  padding: 10px 20px;
   background-color: #2ecc71;
   color: black;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   background-color: #27ae60;
 }
 
-p {
-  font-size: 2em;
-  color: black;
+.result-container {
   text-align: center;
 }
 
-.error {
-  color: #ff0000; /* Cor vermelha para mensagens de erro */
-  margin-top: 5px;
+.result-text {
+  font-size: 2em;
+  color: black;
 }
 
-/* Adicionando uma classe para as mensagens de feedback */
 .feedback-message {
   color: #a01010;
   margin-top: 10px;
-  
 }
