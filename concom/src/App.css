@@ -16,8 +16,9 @@ main {
 }
 
 div {
-  max-width: 600px;
-  margin: auto;
+  width: 80%; /* ou qualquer largura desejada */
+  margin: auto; /* centraliza horizontalmente */
+  max-width: 600px; /* mantém o máximo de largura para evitar esticar demais em telas grandes */
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
@@ -65,5 +66,4 @@ p {
 .feedback-message {
   color: #a01010;
   margin-top: 10px;
-  
 }
