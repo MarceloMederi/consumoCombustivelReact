@@ -17,14 +17,10 @@ main {
 
 div {
   max-width: 800px; /* mantém o máximo de largura para evitar esticar demais em telas grandes */
-  padding: 20px;
+  padding: 50px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-div > div {
-  margin-bottom: 10%;
 }
 
 input {
