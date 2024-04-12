@@ -29,13 +29,14 @@ input[type="text"]::placeholder {
 }
 
 input[type="text"] {
-  width: 100%;
-  padding: 8px;
+  width: 80%; /* Reduzindo a largura */
+  height: 30px; /* Reduzindo a altura */
+  padding: 8px; 
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 14px; /* Diminuindo o tamanho da fonte */
+  font-size: 14px;
 }
 
 .error {
