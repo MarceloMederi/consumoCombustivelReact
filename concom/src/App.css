@@ -56,7 +56,7 @@ button {
 }
 
 .error {
-  color: red;
+  color: #cc99ff;
   font-size: 14px;
   margin-top: 5px; /* Ajuste de espaçamento */
   display: block; /* Faz com que a mensagem de erro ocupe uma linha inteira */
