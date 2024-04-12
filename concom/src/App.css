@@ -55,9 +55,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-  color: #FFFFFF;
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px; /* Ajuste de espaçamento */
+  display: block; /* Faz com que a mensagem de erro ocupe uma linha inteira */
 }
 
 @media screen and (max-width: 600px) {
