@@ -29,7 +29,7 @@ input[type="text"]::placeholder {
 }
 
 input[type="text"] {
-  width: 80%; /* Reduzindo a largura */
+  width: 30%; /* Reduzindo a largura */
   height: 30px; /* Reduzindo a altura */
   padding: 8px; 
   margin: 5px 0;
