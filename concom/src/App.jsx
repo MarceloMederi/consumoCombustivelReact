@@ -83,7 +83,7 @@ function App() {
           </div>
         </form>
 
-        {calculationResult !== null && (
+        {calculationResult !== null && kilometer && average && price && (
           <div>
             <h2>O custo para percorrer {kilometer} quilômetros é:</h2>
             <p>{`R$ ${parseFloat(calculationResult).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}</p>
