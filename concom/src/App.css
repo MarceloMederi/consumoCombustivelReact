@@ -17,7 +17,7 @@ main {
 
 div {
   width: 100%; /* ou qualquer largura desejada */
-  margin: 50%; /* centraliza horizontalmente */
+  margin: 100%; /* centraliza horizontalmente */
   max-width: 600px; /* mantém o máximo de largura para evitar esticar demais em telas grandes */
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
