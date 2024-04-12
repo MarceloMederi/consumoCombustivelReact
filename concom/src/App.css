@@ -40,9 +40,10 @@ input[type="text"] {
 }
 
 .error {
-  color: #400080;
-  font-size: 14px;
-  margin-top: 5px; /* Ajuste de espaçamento */
+  color: #ff0000; /* Vermelho para destacar o erro */
+  font-size: 16px; /* Tamanho da fonte um pouco maior para chamar a atenção */
+  font-weight: bold; /* Negrito para tornar o texto mais forte */
+  margin-top: 10px; /* Espaçamento maior acima da mensagem de erro */
   display: block; /* Faz com que a mensagem de erro ocupe uma linha inteira */
 }
 
