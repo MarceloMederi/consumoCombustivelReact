@@ -11,6 +11,13 @@ function App() {
   const [price, setPrice] = useState("");
   const [calculationResult, setCalculationResult] = useState(null);
 
+  const resetData = () => {
+  setKilometer("");
+  setAverage("");
+  setPrice("");
+  setCalculationResult(null);
+};
+
   const handleInputChange = (event, setState, setErrorState, maxValue) => {
     const value = event.target.value;
     setState(value);
@@ -87,6 +94,7 @@ function App() {
           <div>
             <h2>O custo para percorrer {kilometer} quilômetros é:</h2>
             <p>{`R$ ${parseFloat(calculationResult).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}</p>
+            <button onClick={resetData}>Limpar Dados</button> {/* Botão de limpar dados */}
           </div>
         )}
       </div>
