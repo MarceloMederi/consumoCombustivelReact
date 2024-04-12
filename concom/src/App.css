@@ -36,11 +36,11 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .error {
-  color: #333333;
+  color: #400080;
   font-size: 14px;
   margin-top: 5px; /* Ajuste de espaçamento */
   display: block; /* Faz com que a mensagem de erro ocupe uma linha inteira */
