@@ -16,9 +16,9 @@ const resetData = () => {
   setAverage("");
   setPrice("");
   setCalculationResult(null);
-  setKilometerError("");
-  setAverageError("");
-  setPriceError("");
+  setKilometerError(null);
+  setAverageError(null);
+  setPriceError(null);
 };
 
   const handleInputChange = (event, setState, setErrorState, maxValue) => {
