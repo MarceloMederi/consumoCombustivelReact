@@ -40,10 +40,10 @@ input[type="text"] {
 }
 
 .error {
-  color: red;
+  color: #333333;
   font-size: 14px;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: 5px; /* Ajuste de espaçamento */
+  display: block; /* Faz com que a mensagem de erro ocupe uma linha inteira */
 }
 
 button {
@@ -53,13 +53,6 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.error {
-  color: #cc99ff;
-  font-size: 14px;
-  margin-top: 5px; /* Ajuste de espaçamento */
-  display: block; /* Faz com que a mensagem de erro ocupe uma linha inteira */
 }
 
 @media screen and (max-width: 600px) {
