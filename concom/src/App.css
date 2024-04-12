@@ -43,7 +43,7 @@ input[type="text"] {
 button {
   padding: 10px 20px;
   background-color: #007bff;
-  color: white;
+  color: green;
   border: none;
   border-radius: 5px;
   cursor: pointer;
