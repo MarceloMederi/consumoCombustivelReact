@@ -17,18 +17,12 @@ main {
 
 div {
   width: 80%; /* ou qualquer largura desejada */
-  margin: auto; /* centraliza horizontalmente */
+  margin: 50%; /* centraliza horizontalmente */
   max-width: 600px; /* mantém o máximo de largura para evitar esticar demais em telas grandes */
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh; /* define a altura como 100% da altura da viewport */
 }
-
-
 
 input {
   width: calc(100% - 20px);
