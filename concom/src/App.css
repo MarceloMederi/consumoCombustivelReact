@@ -6,6 +6,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+}
 }
 
 main {
