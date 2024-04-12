@@ -1,68 +1,64 @@
 body {
-  background: linear-gradient(50deg, #3498db, #2ecc71);
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  font-variant: small-caps;
-  color: #fff;
-}
-
 main {
-  text-shadow: #2ecc71 1px 1px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
-div {
-  width: 80%; /* ou qualquer largura desejada */
-  max-width: 600px; /* mantém o máximo de largura para evitar esticar demais em telas grandes */
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-input {
-  width: calc(100% - 20px);
+input[type="text"] {
+  width: 100%;
   padding: 10px;
-  border: 1px solid #2ecc71;
+  margin: 5px 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 10px 0;
   box-sizing: border-box;
 }
 
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #2ecc71;
-  color: black;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #27ae60;
+  background-color: #0056b3;
 }
 
-p {
-  font-size: 2em;
-  color: black;
-  text-align: center;
-}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
 
-.error {
-  color: #ff0000; /* Cor vermelha para mensagens de erro */
-  margin-top: 5px;
-}
+  input[type="text"] {
+    width: 90%;
+  }
 
-/* Adicionando uma classe para as mensagens de feedback */
-.feedback-message {
-  color: #a01010;
-  margin-top: 10px;
+  button {
+    width: 90%;
+  }
 }
