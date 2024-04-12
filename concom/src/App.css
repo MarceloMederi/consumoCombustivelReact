@@ -30,11 +30,12 @@ input[type="text"]::placeholder {
 
 input[type="text"] {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  font-size: 14px; /* Diminuindo o tamanho da fonte */
 }
 
 .error {
