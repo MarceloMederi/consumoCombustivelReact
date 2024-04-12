@@ -58,7 +58,7 @@ function App() {
 
   const renderCalculator = () => {
     return (
-      <div class="init">
+      <div>
         <form>
           <div>
             <label htmlFor="kilometer">Informe a distância que seu veículo vai percorrer (em km)</label>
