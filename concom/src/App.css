@@ -25,6 +25,10 @@ div {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+div > div {
+  margin-bottom: 15px;
+}
+
 input {
   width: calc(100% - 20px);
   padding: 10px;
