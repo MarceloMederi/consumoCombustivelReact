@@ -11,11 +11,14 @@ function App() {
   const [price, setPrice] = useState("");
   const [calculationResult, setCalculationResult] = useState(null);
 
-  const resetData = () => {
+const resetData = () => {
   setKilometer("");
   setAverage("");
   setPrice("");
   setCalculationResult(null);
+  setKilometerError("");
+  setAverageError("");
+  setPriceError("");
 };
 
   const handleInputChange = (event, setState, setErrorState, maxValue) => {
