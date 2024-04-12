@@ -46,6 +46,12 @@ input[type="text"] {
   font-weight: bold; /* Negrito para tornar o texto mais forte */
   margin-top: 10px; /* Espaçamento maior acima da mensagem de erro */
   display: block; /* Garante que a mensagem de erro ocupe uma linha inteira */
+  animation: blink 1s infinite alternate; /* Adiciona a animação de piscar */
+}
+
+@keyframes blink {
+  from { opacity: 0; } /* Define a opacidade inicial como 0 */
+  to { opacity: 1; } /* Define a opacidade final como 1 */
 }
 
 button {
