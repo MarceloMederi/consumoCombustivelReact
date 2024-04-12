@@ -13,15 +13,19 @@ h1 {
 
 main {
   text-shadow: #2ecc71 1px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 div {
-  width: 100%; /* ou qualquer largura desejada */
-  margin: 100%; /* centraliza horizontalmente */
+  width: 80%; /* ou qualquer largura desejada */
   max-width: 600px; /* mantém o máximo de largura para evitar esticar demais em telas grandes */
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 input {
