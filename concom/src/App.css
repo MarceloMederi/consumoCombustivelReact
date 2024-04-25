@@ -78,7 +78,33 @@ p {
   text-align: center;
 }
 
-@media screen and (min-width: 250px) and (max-width: 720px) {
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    color: #000000;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color:  #007bff; /* Mesma cor de fundo */
+    color: #FFFFFF; /* Mesma cor de texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 90%;
+  }
+
+  button:hover {
+    background-color: #0056b3; /* Mesma cor de fundo ao passar o mouse */
+  }
+}
+
+@media only screen and (min-width: 601px) {
   h1 {
     font-size: 20px;
   }
