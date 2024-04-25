@@ -85,6 +85,7 @@ p {
 
   input[type="text"] {
     width: 90%;
+    background-color: #000000;
   }
 
   button[type="button"] {
@@ -118,6 +119,7 @@ p {
 
   input[type="text"] {
     width: 90%;
+    background-color: #000000;
   }
 
   button[type="button"] {
