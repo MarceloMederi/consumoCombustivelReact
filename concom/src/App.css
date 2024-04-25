@@ -89,5 +89,10 @@ p {
 
   button {
     width: 90%;
+    background-color: black;
   }
+
+  button:hover {
+  background-color: #0056b3;
+}
 }
