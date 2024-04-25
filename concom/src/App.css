@@ -78,7 +78,7 @@ p {
   text-align: center;
 }
 
-@media screen and (min-width: 481px) and (max-width: 1200px) {
+@media screen and (min-width: 250px) and (max-width: 1200px) {
   h1 {
     font-size: 20px;
   }
