@@ -86,15 +86,15 @@ p {
   input[type="text"] {
     width: 90%;
   }
-  
-button[type="button"] {
+
+  button[type="button"] {
   background-color: #000000; /* Preto */
   }
 
   button {
     padding: 10px 20px;
-    background-color:  #007bff; /* Mesma cor de fundo */
-    color: #FFFFFF; /* Mesma cor de texto */
+    background-color: #000000; /* Preto */
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -105,9 +105,13 @@ button[type="button"] {
   button:hover {
     background-color: #0056b3; /* Mesma cor de fundo ao passar o mouse */
   }
+
+  button:active {
+    transform: scale(0.95);
+  }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 599px) {
   h1 {
     font-size: 20px;
   }
@@ -122,8 +126,8 @@ button[type="button"] {
 
   button {
     padding: 10px 20px;
-    background-color:  #007bff; /* Mesma cor de fundo */
-    color: #FFFFFF; /* Mesma cor de texto */
+    background-color: #000000; /* Preto */
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -133,5 +137,9 @@ button[type="button"] {
 
   button:hover {
     background-color: #0056b3; /* Mesma cor de fundo ao passar o mouse */
+  }
+
+  button:active {
+    transform: scale(0.95);
   }
 }
