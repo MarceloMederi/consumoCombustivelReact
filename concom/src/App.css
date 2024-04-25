@@ -89,8 +89,8 @@ p {
 
   button {
     padding: 10px 20px;
-    background-color: #000000; /* Mesma cor de fundo */
-    color: white; /* Mesma cor de texto */
+    background-color:  #007bff; /* Mesma cor de fundo */
+    color: #FFFFFF; /* Mesma cor de texto */
     border: none;
     border-radius: 5px;
     cursor: pointer;
