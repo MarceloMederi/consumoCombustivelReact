@@ -85,7 +85,10 @@ p {
 
   input[type="text"] {
     width: 90%;
-    color: #000000;
+  }
+  
+button[type="button"] {
+  background-color: #000000; /* Preto */
   }
 
   button {
@@ -111,7 +114,10 @@ p {
 
   input[type="text"] {
     width: 90%;
-    color: #000000;
+  }
+
+  button[type="button"] {
+  background-color: #000000; /* Preto */
   }
 
   button {
