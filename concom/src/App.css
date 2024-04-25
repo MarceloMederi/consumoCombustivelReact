@@ -85,6 +85,7 @@ p {
 
   input[type="text"] {
     width: 90%;
+    color: #000000;
   }
 
   button {
