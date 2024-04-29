@@ -88,6 +88,10 @@ p {
     color: Yellow;
   }
 
+  button[type="button"] {
+  background-color: #000000; /* Preto */
+  }
+
   button {
     padding: 10px 20px;
     background-color: black; /* Preto */
