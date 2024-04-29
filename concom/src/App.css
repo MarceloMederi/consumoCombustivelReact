@@ -81,6 +81,7 @@ p {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 20px;
+    color: white;
   }
 
   input[type="text"] {
