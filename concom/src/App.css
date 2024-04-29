@@ -88,48 +88,9 @@ p {
     color: Yellow;
   }
 
-  button[type="button"] {
-  background-color: #000000; /* Preto */
-  }
-
   button {
     padding: 10px 20px;
-    background-color: #000000; /* Preto */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    width: 90%;
-  }
-
-  button:hover {
-    background-color: #0056b3; /* Mesma cor de fundo ao passar o mouse */
-  }
-
-  button:active {
-    transform: scale(0.95);
-  }
-}
-
-@media only screen and (min-width: 599px) {
-  h1 {
-    font-size: 20px;
-  }
-
-  input[type="text"] {
-    width: 90%;
-    color: black;
-  }
-
-  button[type="button"] {
-  background-color: #000000; /* Preto */
-  }
-
-  button {
-    padding: 10px 20px;
-    background-color: #000000; /* Preto */
-    color: white;
+    background-color: black; /* Preto */
     border: none;
     border-radius: 5px;
     cursor: pointer;
