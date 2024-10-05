@@ -11,6 +11,7 @@ body {
 
 main {
   width: 90%;
+  max-width: 600px; /* Limite de largura */
   text-align: center;
 }
 
@@ -30,8 +31,9 @@ input[type="text"]::placeholder {
 
 input[type="text"] {
   width: 50%; /* Reduzindo a largura */
+  max-width: 100%; /* Impede que ultrapasse a tela */
   height: 30px; /* Reduzindo a altura */
-  padding: 8px; 
+  padding: 8px;
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -72,8 +74,13 @@ button:active {
   transform: scale(0.95);
 }
 
+button:focus {
+  outline: 2px solid #0056b3; /* Destaca o botão quando focado */
+  outline-offset: 4px;
+}
+
 p {
-  font-size: 50px;
+  font-size: calc(18px + 2vw); /* Tamanho da fonte responsiva */
   font-weight: bold;
   text-align: center;
 }
@@ -97,7 +104,7 @@ p {
   button {
     padding: 10px 20px;
     background-color: black; /* Define a cor de fundo como preto */
-    color: black; /* Define a cor do texto como preto */
+    color: white; /* Corrigido o contraste */
     border: none;
     border-radius: 5px;
     cursor: pointer;
