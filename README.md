@@ -2,15 +2,6 @@
 #
 Bem-vindo ao Controle de Gasto de Combustível, uma aplicação simples para calcular o custo de uma viagem com base na distância, na média de consumo do veículo e no preço do combustível.
 
-# Funcionalidades
-* Autenticação
-Obs:Antes de começar, faça login usando as credenciais de administrador.
-
-# Usuário: Admin
-# Senha: Admin
-* A autenticação garante que apenas usuários autorizados tenham acesso às funcionalidades da calculadora.
-#
-
 # Calculadora de Gasto de Combustível
 Uma vez autenticado, você terá acesso à calculadora. Preencha os campos necessários e obtenha o custo estimado da sua viagem.
 
