@@ -98,7 +98,10 @@ function App() {
           <div className="result show">
             <h2>O custo para percorrer {kilometer} quilômetros é:</h2>
             <p>{`R$ ${parseFloat(calculationResult).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}</p>
-            <button onClick={resetData}>Limpar Dados</button>
+            <div className="button-container">
+              <button onClick={resetData}>Limpar Dados</button>
+              <button onClick={() => setShowCalculator(false)}>Ocultar valores</button>
+            </div>
           </div>
         )}
       </div>
@@ -109,9 +112,11 @@ function App() {
     <main className="show">
       <h1>Controle de gasto de combustível</h1>
 
-      <button onClick={() => setShowCalculator(!showCalculator)}>
-        {showCalculator ? "Ocultar valores" : "Informe os valores"}
-      </button>
+      {!showCalculator && (
+        <button onClick={() => setShowCalculator(true)}>
+          Informe os valores
+        </button>
+      )}
 
       <CSSTransition
         in={showCalculator}
