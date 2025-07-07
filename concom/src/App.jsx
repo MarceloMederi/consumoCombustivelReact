@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import './App.css';
 
 function App() {
@@ -69,7 +70,7 @@ function App() {
   const renderCalculator = () => {
     return (
       <div>
-        <form>
+        <form className="show">
           <div>
             <label htmlFor="kilometer">Informe a distância que seu veículo vai percorrer (em km)</label>
             <input type="text" id="kilometer" placeholder="200" value={kilometer} required onChange={(e) => handleInputChange(e, setKilometer, setKilometerError, 10000)} />
@@ -94,7 +95,7 @@ function App() {
         </form>
 
         {calculationResult !== null && kilometer && average && price && (
-          <div className="result">
+          <div className="result show">
             <h2>O custo para percorrer {kilometer} quilômetros é:</h2>
             <p>{`R$ ${parseFloat(calculationResult).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}</p>
             <button onClick={resetData}>Limpar Dados</button>
@@ -105,14 +106,21 @@ function App() {
   };
 
   return (
-    <main>
+    <main className="show">
       <h1>Controle de gasto de combustível</h1>
 
-      {!showCalculator ? (
-        <button onClick={() => setShowCalculator(true)}>Informe os valores</button>
-      ) : (
-        renderCalculator()
-      )}
+      <button onClick={() => setShowCalculator(!showCalculator)}>
+        {showCalculator ? "Ocultar valores" : "Informe os valores"}
+      </button>
+
+      <CSSTransition
+        in={showCalculator}
+        timeout={300}
+        classNames="fade"
+        unmountOnExit
+      >
+        {renderCalculator()}
+      </CSSTransition>
     </main>
   );
 }

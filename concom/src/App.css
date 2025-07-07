@@ -18,6 +18,14 @@ main {
   background: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Começa invisível */
+  transform: translateY(-20px); /* Começa um pouco acima */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transição para aparecer */
+}
+
+main.show {
+  opacity: 1; /* Torna visível */
+  transform: translateY(0); /* Move para a posição original */
 }
 
 h1 {
@@ -29,6 +37,14 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0; /* Começa invisível */
+  transform: translateY(-20px); /* Começa um pouco acima */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transição para aparecer */
+}
+
+form.show {
+  opacity: 1; /* Torna visível */
+  transform: translateY(0); /* Move para a posição original */
 }
 
 input[type="text"]::placeholder {
@@ -99,6 +115,14 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   color: #000;
+  opacity: 0; /* Começa invisível */
+  transform: translateY(-20px); /* Começa um pouco acima */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transição para aparecer */
+}
+
+.result.show {
+  opacity: 1; /* Torna visível */
+  transform: translateY(0); /* Move para a posição original */
 }
 
 .result h2 {
