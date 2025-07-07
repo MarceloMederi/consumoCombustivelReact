@@ -100,7 +100,7 @@ function App() {
             <p>{`R$ ${parseFloat(calculationResult).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}</p>
             <div className="button-container">
               <button onClick={resetData}>Limpar Dados</button>
-              <button onClick={() => setShowCalculator(false)}>Ocultar valores</button>
+              <button onClick={() => window.location.reload()}>Ocultar valores</button>
             </div>
           </div>
         )}
