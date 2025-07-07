@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -7,16 +7,22 @@ body {
   align-items: center;
   height: 100vh;
   background: linear-gradient(to bottom, #00264d, #4d94ff);
+  color: #fff;
 }
 
 main {
   width: 90%;
-  max-width: 600px; /* Limite de largura */
+  max-width: 400px; /* Reduzido para melhor estética */
   text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 form {
@@ -27,47 +33,55 @@ form {
 
 input[type="text"]::placeholder {
   text-align: center;
+  color: #ccc;
 }
 
 input[type="text"] {
-  width: 50%; /* Reduzindo a largura */
-  max-width: 100%; /* Impede que ultrapasse a tela */
-  height: 30px; /* Reduzindo a altura */
-  padding: 8px;
-  margin: 5px 0;
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none; /* Remove o outline padrão */
 }
 
 .error {
-  color: #ff4d4d; /* Vermelho mais suave */
-  font-size: 16px; /* Tamanho da fonte */
-  font-weight: bold; /* Negrito para tornar o texto mais forte */
-  margin-top: 10px; /* Espaçamento maior acima da mensagem de erro */
-  display: block; /* Garante que a mensagem de erro ocupe uma linha inteira */
-  animation: blink 1s infinite alternate; /* Adiciona a animação de piscar */
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  animation: fade 0.5s ease-in-out;
 }
 
-@keyframes blink {
-  from { opacity: 0; } /* Define a opacidade inicial como 0 */
-  to { opacity: 1; } /* Define a opacidade final como 1 */
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: black;
+  padding: 12px 20px;
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto branca */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 button:active {
@@ -75,48 +89,38 @@ button:active {
 }
 
 button:focus {
-  outline: 2px solid #0056b3; /* Destaca o botão quando focado */
-  outline-offset: 4px;
+  outline: 2px solid #ffcc00;
+  outline-offset: 2px;
 }
 
-p {
-  font-size: calc(18px + 2vw); /* Tamanho da fonte responsiva */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  color: #000;
+}
+
+.result h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.result p {
+  font-size: 24px;
   font-weight: bold;
-  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 20px;
-    color: white;
+    font-size: 24px;
   }
 
   input[type="text"] {
-    width: 90%;
-    color: black;
-  }
-
-  button[type="button"] {
-    background-color: black; /* Define a cor de fundo como preto */
-    color: white; /* Define a cor do texto como branco */
+    width: 100%;
   }
 
   button {
-    padding: 10px 20px;
-    background-color: black; /* Define a cor de fundo como preto */
-    color: white; /* Corrigido o contraste */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    width: 90%;
-  }
-
-  button:hover {
-    background-color: #0056b3; /* Mesma cor de fundo ao passar o mouse */
-  }
-
-  button:active {
-    transform: scale(0.95);
+    width: 100%;
   }
 }
